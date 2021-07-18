@@ -1,15 +1,23 @@
 package com.xumumi.entity;
 
+import javax.persistence.*;
+
 /**
  * 基础类型
  *
  * @author xumumi
  */
+@MappedSuperclass
 public class Base {
+    @Id
     private Integer id;
+    @Column
     private String name;
+    @Column
     private String description;
+    @Column
     private Integer tier;
+    @Column
     private String image;
 
     public final Integer getId() {
@@ -44,11 +52,11 @@ public class Base {
         tier = value;
     }
 
-    public String getImage() {
+    public final String getImage() {
         return image;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public final void setImage(final String value) {
+        image = value;
     }
 }

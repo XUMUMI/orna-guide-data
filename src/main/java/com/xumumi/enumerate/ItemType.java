@@ -35,6 +35,10 @@ public enum ItemType {
      */
     Accessory("Accessory"),
     /**
+     * 装饰品
+     */
+    Adornment("Adornment"),
+    /**
      * 材料
      */
     Material("Material"),

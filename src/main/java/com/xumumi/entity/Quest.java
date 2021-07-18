@@ -5,5 +5,5 @@ package com.xumumi.entity;
  *
  * @author xumumi
  */
-public class Quest {
+public final class Quest {
 }

@@ -5,14 +5,14 @@ package com.xumumi.entity;
  *
  * @author xumumi
  */
-public class Assessment extends Item {
+public final class Assessment extends Item {
     private double quality;
 
-    public final double getQuality() {
+    public double getQuality() {
         return quality;
     }
 
-    public final void setQuality(final double value) {
+    public void setQuality(final double value) {
         quality = value;
     }
 }

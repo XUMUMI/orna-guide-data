@@ -10,13 +10,42 @@ public enum SkillType {
      * 攻击
      */
     Attack("Attack"),
+    /**
+     * 增益
+     */
     Buff("Buff"),
-    Dot("D.O.T."),
+    /**
+     * 减益
+     */
     Debuff("Debuff"),
+    /**
+     * 治疗
+     */
+    Healing("Healing"),
+    /**
+     * 魔法
+     */
     Magic("Magic"),
+    /**
+     * 多轮攻击
+     */
     MultiRoundAttack("Multi-round Attack"),
+    /**
+     * 多轮魔攻
+     */
     MultiRoundMagic("Multi-round Magic"),
-    Passive("Passive");
+    /**
+     * 被动
+     */
+    Passive("Passive"),
+    /**
+     * 防御
+     */
+    Ward("Ward"),
+    /**
+     * 其他
+     */
+    Other("Other");
 
     private final String name;
 
