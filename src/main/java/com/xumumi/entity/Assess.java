@@ -5,7 +5,7 @@ package com.xumumi.entity;
  *
  * @author xumumi
  */
-public final class Assessment extends Item {
+public final class Assess extends Item {
     private double quality;
 
     public double getQuality() {

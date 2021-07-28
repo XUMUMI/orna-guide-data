@@ -1,6 +1,6 @@
 package com.xumumi.repository;
 
-import com.xumumi.api.Config;
+import com.xumumi.Config;
 import com.xumumi.entity.individual.Class;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.xumumi.api;
+package com.xumumi;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
