@@ -1,4 +1,4 @@
-package com.xumumi;
+package com.xumumi.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -8,8 +8,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author xumumi
  */
 @ConfigurationProperties("orna")
-public class Config {
+public class OrnaConfig {
     private String url;
+    private String imgUrl;
 
     public final String getUrl() {
         return url;
@@ -17,5 +18,13 @@ public class Config {
 
     public final void setUrl(final String value) {
         url = value;
+    }
+
+    public final String getImgUrl() {
+        return imgUrl;
+    }
+
+    public final void setImgUrl(final String value) {
+        imgUrl = value;
     }
 }

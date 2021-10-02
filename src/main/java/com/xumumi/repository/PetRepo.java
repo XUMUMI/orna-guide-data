@@ -1,6 +1,6 @@
 package com.xumumi.repository;
 
-import com.xumumi.Config;
+import com.xumumi.config.OrnaConfig;
 import com.xumumi.entity.individual.Pet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PetRepo extends OrnaRepository<Pet> {
     @Autowired
-    public PetRepo(final Config config) {
-        super(config, Pet.class);
+    public PetRepo(final OrnaConfig ornaConfig) {
+        super(ornaConfig, Pet.class);
     }
 }

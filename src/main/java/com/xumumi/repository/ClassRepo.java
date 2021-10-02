@@ -1,19 +1,14 @@
 package com.xumumi.repository;
 
-import com.xumumi.Config;
-import com.xumumi.entity.individual.Class;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import com.xumumi.entity.dao.Class;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
- * 从远程获取 {@link Class}
+ * 从数据库获取 {@link Class}
  *
  * @author xumumi
  */
-@Component
-public class ClassRepo extends OrnaRepository<Class> {
-    @Autowired
-    public ClassRepo(final Config config) {
-        super(config, Class.class);
-    }
+@Repository
+public interface ClassRepo extends JpaRepository<Class, Integer> {
 }

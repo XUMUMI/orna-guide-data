@@ -1,5 +1,8 @@
 <template>
-  <img src="https://playorna.com/static/img/orna.png" alt="logo" />
+  <Header class="header" title="Classes" />
+  <div class="main">
+    <Search :submit="getClass" />
+  </div>
 </template>
 
 <script src="./App.js" />

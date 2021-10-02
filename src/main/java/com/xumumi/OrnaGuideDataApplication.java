@@ -1,5 +1,6 @@
 package com.xumumi;
 
+import com.xumumi.config.OrnaConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -18,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableJpaRepositories
-@EnableConfigurationProperties(Config.class)
+@EnableConfigurationProperties(OrnaConfig.class)
 public class OrnaGuideDataApplication {
     @SuppressWarnings("StaticNonFinalField")
     public static ConfigurableApplicationContext context;

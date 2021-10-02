@@ -3,7 +3,7 @@ package com.xumumi.repository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xumumi.Config;
+import com.xumumi.config.OrnaConfig;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -24,10 +24,10 @@ class OrnaRepository<Type> {
     private final Class<? extends Type> type;
     private final String url;
 
-    OrnaRepository(final Config config, final Class<? extends Type> value) {
+    OrnaRepository(final OrnaConfig ornaConfig, final Class<? extends Type> value) {
         type = value;
-        final String ornaGuideUrl = config.getUrl();
-        url = "%s%s".formatted(ornaGuideUrl, type.getSimpleName().toLowerCase(Locale.ROOT));
+        final String ornaGuideUrl = ornaConfig.getUrl();
+        url = "%s/%s".formatted(ornaGuideUrl, type.getSimpleName().toLowerCase(Locale.ROOT));
     }
 
     public final Type getById(final int id) throws JsonProcessingException {

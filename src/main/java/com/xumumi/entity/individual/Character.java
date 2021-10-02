@@ -48,7 +48,7 @@ sealed class Character extends Base permits Class, Specialization {
      *
      * @author xumumi
      */
-    private static final class SkillsInfo {
+    static final class SkillsInfo {
         private Skill[] passives;
         private Skill[] learns;
         private Integer slots;

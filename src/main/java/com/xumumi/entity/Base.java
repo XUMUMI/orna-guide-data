@@ -1,5 +1,7 @@
 package com.xumumi.entity;
 
+import com.xumumi.util.LanguageUtil;
+
 import javax.persistence.*;
 
 /**
@@ -11,14 +13,12 @@ import javax.persistence.*;
 public class Base {
     @Id
     private Integer id;
-    @Column
     private String name;
-    @Column
+    private String nameCn;
     private String description;
-    @Column
+    private String descriptionCn;
     private Integer tier;
-    @Column
-    private String image;
+//    private String image;
 
     public final Integer getId() {
         return id;
@@ -29,19 +29,27 @@ public class Base {
     }
 
     public final String getName() {
-        return name;
+        return LanguageUtil.getCurrentLang().equals(LanguageUtil.EN_US) ? name : nameCn;
     }
 
     public final void setName(final String value) {
         name = value;
     }
 
+    public final void setNameCn(final String value) {
+        nameCn = value;
+    }
+
     public final String getDescription() {
-        return description;
+        return LanguageUtil.getCurrentLang().equals(LanguageUtil.EN_US) ? description : descriptionCn;
     }
 
     public final void setDescription(final String value) {
         description = value;
+    }
+
+    public final void setDescriptionCn(final String value) {
+        descriptionCn = value;
     }
 
     public final Integer getTier() {
@@ -52,11 +60,11 @@ public class Base {
         tier = value;
     }
 
-    public final String getImage() {
-        return image;
-    }
-
-    public final void setImage(final String value) {
-        image = value;
-    }
+//    public final String getImage() {
+//        return image;
+//    }
+//
+//    public final void setImage(final String value) {
+//        image = value;
+//    }
 }

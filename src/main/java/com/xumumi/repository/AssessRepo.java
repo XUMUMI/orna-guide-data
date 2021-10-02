@@ -1,6 +1,6 @@
 package com.xumumi.repository;
 
-import com.xumumi.Config;
+import com.xumumi.config.OrnaConfig;
 import com.xumumi.entity.Assess;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AssessRepo extends OrnaRepository<Assess> {
     @Autowired
-    public AssessRepo(final Config config) {
-        super(config, Assess.class);
+    public AssessRepo(final OrnaConfig ornaConfig) {
+        super(ornaConfig, Assess.class);
     }
 }

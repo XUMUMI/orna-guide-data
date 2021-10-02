@@ -1,6 +1,6 @@
 package com.xumumi.repository;
 
-import com.xumumi.Config;
+import com.xumumi.config.OrnaConfig;
 import com.xumumi.entity.Skill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SkillRepo extends OrnaRepository<Skill> {
     @Autowired
-    public SkillRepo(final Config config) {
-        super(config, Skill.class);
+    public SkillRepo(final OrnaConfig ornaConfig) {
+        super(ornaConfig, Skill.class);
     }
 }
